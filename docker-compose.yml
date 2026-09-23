@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: dataflow_postgres
+    environment:
+      POSTGRES_DB: dataflow
+      POSTGRES_USER: dataflow_user
+      POSTGRES_PASSWORD: dataflow_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

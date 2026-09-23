@@ -1,3 +1,14 @@
+# DataFlow project-specific
+data/raw/*.csv
+data/raw/*.json
+data/processed/
+data/output/
+reports/*.csv
+reports/*.png
+logs/
+.env
+*.parquet
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
